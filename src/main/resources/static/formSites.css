@@ -1,0 +1,85 @@
+body {
+    background-color: #00112a;
+    font-family: Calibri ;
+    color: beige;
+}
+#logoDiv{
+    text-align: right;
+}
+
+#logo{
+    color: yellow;
+    font-family: "Yu Gothic UI";
+    font-style: italic;
+    font-size: 20px;
+    text-underline-offset: 0;
+}
+
+
+#naglowek {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: white;
+    font-size: 50px;
+    background-color: #1c2653;
+    width: 750px;
+}
+
+
+.przyciski{
+    list-style-type: none;
+}
+.przyciski li{
+    display: inline-block;
+}
+
+.funk{
+    color: beige;
+
+}
+.funkcyjny{
+    background-color: #1c2653;
+    width: 200px;
+    height: 20px;
+    border: 1px solid white;
+    border-radius: 30px;
+    text-align: center;
+    padding-top: 2px;
+}
+.funkcyjny:visited{
+    background-color: #1c2653;
+    width: 200px;
+    height: 20px;
+    border: 1px solid red;
+    border-radius: 30px;
+    text-align: center;
+    padding-top: 2px;
+}
+
+.funkcyjny:hover
+{
+    background-color: darkgrey;
+    padding-top: 1px;
+}
+
+#content
+{
+    color: lightgrey;
+    margin-top: 10px;
+    background-color: #1c2653;
+    height: 750px;
+    width: 750px;
+    border: 1px solid #1c2653;
+    border-radius: 5px;
+}
+
+#table {
+    background-color: #00112a;
+    margin-top: 30px;
+    border-radius: 15px;
+}
+td {
+    border: 2px solid lightgrey;
+    /*border-radius: 10px;*/
+    background-color: #00112a;
+}

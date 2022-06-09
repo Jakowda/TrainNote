@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>traiNote</title>
+  <link rel="stylesheet" type="text/css" th:href="@{/style.css}" href="../../style.css"/>
+</head>
+<body>
+<div align="center">
+<div id="logoDiv"><a href="/" id="logo">traiNote</a></div>
+
+  <h1 id="naglowek">Raport postępu</h1>
+  <div class="funkcyjny"><a class="funk" href="/raport">Wróć</a></div>
+    <div id="content">
+      <a th:text="'Cwiczenie: '+${nazwaNazwa}" style="color: white; font-size: 30px">.Test</a>
+        <table id="table" cellpadding="10">
+          <thead>
+          <tr>
+            <th>Trening z dnia</th>
+            <th>Obciazenie</th>
+            <th>Ilosc powtórzen</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr th:each="wynik:${listaWynikow}">
+            <td id="data" th:text="${wynik.data_treningu}">Data</td>
+            <td th:text="${wynik.obciazenie}">opis</td>
+            <td th:text="${wynik.ilosc_powtorzen}">opis</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+  </div>
+
+</body>
+</html>

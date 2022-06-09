@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>traiNote</title>
+  <link rel="stylesheet" type="text/css" th:href="@{/style.css}" href="../../style.css"/>
+</head>
+<body>
+<div align="center">
+  <div id="logoDiv"><a href="/" id="logo">traiNote</a></div>
+  <h1 id="naglowek">Edytuj serie</h1>
+  </br>
+    <div id="content">
+        <table id="table" cellpadding="15">
+          <form action="#" th:action="@{'/zapiszZmianySerii/'+${seriaId}}" th:object="${seria}" method="post">
+            <tr>
+              <td>Ilość powtórzeń</td>
+              <td>
+                <input th:type="text" th:field="*{ilosc_powtorzen}" th:value="*{ilosc_powtorzen}"/>
+              </td>
+            </tr>
+            <tr>
+              <td>Obciążenie</td>
+              <td>
+                <input th:type="text" th:field="*{obciazenie}" th:value="*{obciazenie}"/>
+              </td>
+            </tr>
+            <tr>
+              <td  colspan="2" align="center"><button type="submit">SUBMIT</button></td>
+            </tr>
+          </form>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>

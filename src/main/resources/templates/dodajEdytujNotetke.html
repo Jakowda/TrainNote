@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>traiNote</title>
+  <link rel="stylesheet" type="text/css" th:href="@{/style.css}" href="../../style.css"/>
+</head>
+<body>
+<div align="center">
+  <div id="logoDiv"><a href="/" id="logo">traiNote</a></div>
+  <h1  id="naglowek">Dodaj/Edytuj notatkę</h1>
+  <div class="funkcyjny"><a class="funk" th:href="@{'/edytujTrening/'+${treningID}}">Wróć</a></div>
+  <div id="content">
+      <table id="table" cellpadding="15">
+        <form action="#" th:action="@{'/zapiszZmianyNotatka/'+${treningID}}" th:object="${trening}" method="post">
+          <tr>
+            <td>Notatka z treningu</td>
+            <td>
+              <input th:type="text" cols="40" rows="15"
+                     style="width:250px; height:125px;"  th:field="*{opis_treningu}" th:value="*{opis_treningu}"/>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" align="center"><button type="submit">Zapisz</button></td>
+          </tr>
+        </form>
+      </table>
+  </div>
+</div>
+
+</body>
+</html>
